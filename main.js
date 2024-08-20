@@ -19,13 +19,6 @@ storyWords.forEach (function (word)  {
   }
 })
 
-storyWords.reduce((overusedWordCount, word) => {
-  if(overusedWords.includes(word)) {
-    overusedWordCount += 1
-  }
-  return overusedWordCount
-}, 0)
-
 let sentenceCount = storyWords.reduce (function (sentenceCount, word) {
   if (word.endsWith(".") || word.endsWith('!')) {
     return sentenceCount+=1;
